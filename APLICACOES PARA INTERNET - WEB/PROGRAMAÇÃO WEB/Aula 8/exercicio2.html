@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function OrdemCrescente() {
+            var result = "";
+            n1 = parseFloat(document.getElementById("numero1").value);
+            n2 = parseFloat(document.getElementById("numero2").value);
+            n3 = parseFloat(document.getElementById("numero3").value);
+            if (n1 < n2 && n2 < n3) {
+                result = n1 + "-" + n2 + "-" + n3;
+            } else if (n1 < n3 && n3 < n2) {
+                result = n1 + "-" + n3 + "-" + n2;
+            } else if (n2 < n1 && n1 < n3) {
+                result = n2 + "-" + n1 + "-" + n3;
+            } else if (n2 < n3 && n3 < n1) {
+                result = n2 + "-" + n3 + "-" + n1;
+            } else if (n3 < n1 && n1 < n2) {
+                result = n3 + "-" + n1 + "-" + n2;
+            } else if (n3 < n2 && n2 < n1) {
+                result = n3 + "-" + n2 + "-" + n1;
+            }
+            document.getElementById("ordenado").value = result;
+        }
+
+        function OrdemDecrescente() {
+            var result = "";
+            n1 = parseFloat(document.getElementById("numero1").value);
+            n2 = parseFloat(document.getElementById("numero2").value);
+            n3 = parseFloat(document.getElementById("numero3").value);
+            if (n1 > n2 && n2 > n3) {
+                result = n1 + "-" + n2 + "-" + n3;
+            } else if (n1 > n3 && n3 > n2) {
+                result = n1 + "-" + n3 + "-" + n2;
+            } else if (n2 > n1 && n1 > n3) {
+                result = n2 + "-" + n1 + "-" + n3;
+            } else if (n2 > n3 && n3 > n1) {
+                result = n2 + "-" + n3 + "-" + n1;
+            } else if (n3 > n1 && n1 > n2) {
+                result = n3 + "-" + n1 + "-" + n2;
+            } else if (n3 > n2 && n2 > n1) {
+                result = n3 + "-" + n2 + "-" + n1;
+            }
+            document.getElementById("ordenado").value = result;
+        }
+
+        function CalcMedia() {
+            n1 = parseFloat(document.getElementById("numero1").value);
+            n2 = parseFloat(document.getElementById("numero2").value);
+            n3 = parseFloat(document.getElementById("numero3").value);
+            media = (n1 + n2 + n3) / 3;
+            //alert("A média dos valores é: "+media);
+            document.getElementById("res").innerHTML = media;
+        }
+
+        window.onload = function () {
+            var btn1 = document.getElementById("button1");
+            var btn2 = document.getElementById("button2");
+            var btn3 = document.getElementById("button3");
+            btn1.onclick = OrdemCrescente;
+            btn2.onclick = OrdemDecrescente;
+            btn3.onclick = CalcMedia;
+        }
+    </script>
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <form id="form1" name="form1" method="post" action="">
+        <p>Número 1:
+            <input name="numero1" type="text" id="numero1" size="10" />
+            <br />Número 2:
+            <input name="numero2" type="text" id="numero2" size="10" />
+            <br />Número 3:
+            <input name="numero3" type="text" id="numero3" size="10" />
+            <br />
+        </p>
+        <p>
+            <input type="button" name="button" id="button1" value="Ordem crescente" />
+            <input type="button" name="button2" id="button2" value="Ordem Decrescente" />
+            <input type="button" name="button3" id="button3" value="M&eacute;dia dos Valores" />
+        </p>
+        <p>Ordenação:
+            <input type="text" name="ordenado" id="ordenado" />
+        </p>
+        <p>
+            Média dos Valores: <span id="res"></span> 
+        </p>
+    </form>
+</body>
+
+</html>

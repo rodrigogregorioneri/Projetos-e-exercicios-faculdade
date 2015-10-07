@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Biblioteca</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="js/jquery-ui.min.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<style type="text/css">
+    h2 {
+        color: black; font-family: Verdana; font-size: 18px;
+    }
+    .cabecalho {
+        background: #79f0d5; color: black; font-family: Verdana; font-size: 14px; font-weight: 800;
+    }
+    .linhas {
+        background: #e6f7f3; color: black; font-family: Verdana; font-size: 14px;
+    }
+</style>
+       
+<script>
+var acervo = 
+[         
+  {
+  "titulo": "Crime e castigo", "autor": "Dostoievski", 
+  "edicao": 1, "anopub": 1992, "editora":"Makron Books",
+  "localpub": "São Paulo", "classificacao": "romance",
+  "codigo": "127Ae", "assunto": "histórico"
+  },
+  {
+  "titulo": "A vida é bela", "autor": "Roberto Benigni", 
+  "edicao": 3, "anopub": 1997, "editora":"History filmes",
+  "localpub": "Roma", "classificacao": "filme",
+  "codigo": "3347Af", "assunto": "ficção"
+  },
+  {
+  "titulo": "O pequeno príncipe", "autor": "Antoine de Saint-Exupéry", 
+  "edicao": 5, "anopub": 2001, "editora":"Erica Books",
+  "localpub": "Rio de Janeiro", "classificacao": "romance",
+  "codigo": "217Ae", "assunto": "infantil"
+  },
+  {
+  "titulo": "Wonderful land", "autor": "Edgar Jones", 
+  "edicao": 11, "anopub": 1986, "editora":"Metro Gld. M.",
+  "localpub": "New York", "classificacao": "ação",
+  "codigo": "21210a", "assunto": "ação"
+  },
+  {
+  "titulo": "Los heraldos negros", "autor": "César Vallejo", 
+  "edicao": 11, "anopub": 1991, "editora":"Lírica S.A.",
+  "localpub": "Campinas", "classificacao": "poesia",
+  "codigo": "9210b", "assunto": "modernismo latinoam."
+  },
+  {
+  "titulo": "Antologia", "autor": "Vinícius de Moraes", 
+  "edicao": 11, "anopub": 1979, "editora":"Ed. Lírica",
+  "localpub": "São Paulo", "classificacao": "poesia",
+  "codigo": "8710d", "assunto": "poesia brasileira"
+  },
+  {
+  "titulo": "Guerra e paz", "autor": "Liev Tolstoi", 
+  "edicao": 21, "anopub": 2012, "editora":"Makron Books",
+  "localpub": "Texas", "classificacao": "romance",
+  "codigo": "2376g", "assunto": "histórico"
+  },
+  {
+  "titulo": "Flores e mais flores v. 1", "autor": "Bill Corn", 
+  "edicao": 1, "anopub": 2011, "editora":"Ed. Liberty",
+  "localpub": "Miami", "classificacao": "romance",
+  "codigo": "123ag", "assunto": "romance social"
+  },
+  {
+  "titulo": "Matrixels", "autor": "Samuel Dickens", 
+  "edicao": 2, "anopub": 2001, "editora":"MGM",
+  "localpub": "Tampa", "classificacao": "filme",
+  "codigo": "117g", "assunto": "ficção científica"
+  },
+  {
+  "titulo": "Lola morre", "autor": "Luis González", 
+  "edicao": 1, "anopub": 2011, "editora":"Novelas S.A.",
+  "localpub": "México", "classificacao": "drama",
+  "codigo": "32w", "assunto": "novela mexicana"
+  },
+  {
+  "titulo": "Flores e mais flores v. 2", "autor": "Bill Corn", 
+  "edicao": 2, "anopub": 2012, "editora":"Ed. Liberty",
+  "localpub": "Miami", "classificacao": "romance",
+  "codigo": "211123ag", "assunto": "romance social"
+  },
+  {
+  "titulo": "Broken heart", "autor": "Lilly D. Stevenson", 
+  "edicao": 4, "anopub": 2011, "editora":"Center Ed.",
+  "localpub": "USA", "classificacao": "drama",
+  "codigo": "bh54", "assunto": "conflitos sociais"
+  },    
+  {
+  "titulo": "Flores e mais flores v. 3", "autor": "Bill Corn", 
+  "edicao": 3, "anopub": 2013, "editora":"Ed. Liberty",
+  "localpub": "Miami", "classificacao": "romance",
+  "codigo": "1333ag", "assunto": "romance social"
+  },
+  {
+  "titulo": "Stars War", "autor": "George Lucas", 
+  "edicao": 21, "anopub": 2012, "editora":"20th Century Fox",
+  "localpub": "Los Angeles", "classificacao": "filme",
+  "codigo": "a6g", "assunto": "ficção científica"
+  }
+]
+</script>
+    
+<script>
+$(function(){	       
+    
+    $("#menu").menu(); 
+    $("#acordeao").accordion();
+    
+    $("#divacervocompleto").hide();
+    $("#divacordeao").hide(); 
+    
+    $("#opcacervotudo").click(function () {
+        var qtde = acervo.length;	
+        var str = "<table border=1><tr class='cabecalho'><td>Título</td><td>Autor</td>"
+                  + "<td>Edição</td><td>Ano Pub.</td>"
+                  + "<td>Editora</td><td>Local</td><td>Classificação</td><td>Código</td><td>Assunto</td></tr>";
+        for (i=0; i<qtde; i++) {
+            str += "<tr class='linhas'>";
+            str += "<td>" + acervo[i].titulo + "</td>";	
+            str += "<td>" + acervo[i].autor + "</td>";	
+            str += "<td>" + acervo[i].edicao + "</td>";	
+            str += "<td>" + acervo[i].anopub + "</td>";	
+            str += "<td>" + acervo[i].editora + "</td>";	
+            str += "<td>" + acervo[i].localpub + "</td>";	
+            str += "<td>" + acervo[i].classificacao + "</td>";	
+            str += "<td>" + acervo[i].codigo + "</td>";	
+            str += "<td>" + acervo[i].assunto + "</td>";	
+            str += "</tr>";
+        } 
+        str += "</table>";
+        $("#divacervocompleto").show();
+        $("#divacordeao").hide();
+        $("#divtabela").html(str);        
+    });
+
+     $("#opcclassificacao").click(function () {
+        var qtde = acervo.length;	
+        var str = "<table border=1><tr class='cabecalho'><td>Título</td><td>Autor</td>"
+                  + "<td>Edição</td><td>Ano Pub.</td><td>Editora</td><td>Local</td>"
+                  + "<td>Classificação</td><td>Código</td><td>Assunto</td></tr>";
+        strpoesia = str; strromance = str; stracao = str; strdrama = str; strfilme = str; 
+        for (i=0; i<qtde; i++) {
+            var strtemp="";
+            strtemp += "<tr class='linhas'>";
+            strtemp += "<td>" + acervo[i].titulo + "</td>";	
+            strtemp += "<td>" + acervo[i].autor + "</td>";	
+            strtemp += "<td>" + acervo[i].edicao + "</td>";	
+            strtemp += "<td>" + acervo[i].anopub + "</td>";	
+            strtemp += "<td>" + acervo[i].editora + "</td>";	
+            strtemp += "<td>" + acervo[i].localpub + "</td>";	
+            strtemp += "<td>" + acervo[i].classificacao + "</td>";	
+            strtemp += "<td>" + acervo[i].codigo + "</td>";	
+            strtemp += "<td>" + acervo[i].assunto + "</td>";	
+            strtemp += "</tr>";
+            if(acervo[i].classificacao=="poesia") strpoesia+=strtemp;
+            if(acervo[i].classificacao=="romance") strromance+=strtemp;
+            if(acervo[i].classificacao=="ação") stracao+=strtemp;
+            if(acervo[i].classificacao=="drama") strdrama+=strtemp;
+            if(acervo[i].classificacao=="filme") strfilme+=strtemp;
+        } 
+        strpoesia += "</table>"; strromance += "</table>"; stracao += "</table>";
+        strdrama += "</table>"; strfilme += "</table>";
+        
+        $("#divpoesia").html(strpoesia); $("#divromance").html(strromance); $("#divacao").html(stracao); 
+        $("#divdrama").html(strdrama); $("#divfilme").html(strfilme); 
+         
+        $("#divacervocompleto").hide();
+        $("#divacordeao").show();       
+    });
+
+});
+</script>
+</head>
+<body>
+
+<h1>A biblioteca e seu acervo</h1>
+    
+<ul id="menu">
+   <li id="opcacervotudo"><span class="ui-icon ui-icon-disk"></span>Mostrar o acervo completo</li>
+   <li id="opcclassificacao"><span class="ui-icon ui-icon-zoomin"></span>Mostrar o acervo por classificação</li>
+</ul>
+    
+    
+<div id="divacervocompleto">
+    <br><h2>Dados do acervo da biblioteca.</h2>
+    <div id="divtabela"></div>
+</div>
+
+<div id="divacordeao" >
+    <br><h2>Dados do acervo da biblioteca, por gêneros.</h2>
+    
+    <div id="acordeao">
+        
+        <h3>Poesia</h3>
+        <div id="divpoesia"><br><br><br><br><br></div>
+        
+        <h3>Romance</h3>
+        <div id="divromance"></div>
+        
+        <h3>Ação</h3>
+        <div id="divacao"></div>
+        
+        <h3>Drama</h3>
+        <div id="divdrama"></div>
+        
+        <h3>Filme</h3>
+        <div id="divfilme"></div>
+        
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+    
+</body>
+</html>

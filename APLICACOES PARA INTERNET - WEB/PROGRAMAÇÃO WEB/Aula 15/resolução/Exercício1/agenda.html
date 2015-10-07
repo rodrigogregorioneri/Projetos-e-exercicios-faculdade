@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled 1</title>
+
+    <script src="agenda.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../js/jquery-ui.min.css" type="text/css">
+    <style>
+        #principal {
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        $(function () {
+
+
+            var x = dados.length;
+            var cont = 1;
+            for (i = 0; i < x; i++) {
+                $("#nome" + cont).html("Nome: " + dados[i].nome + "<br>");
+                $("#item" + cont).html("Código: " + dados[i].id + "<br>" +
+                    "Telefone: " + dados[i].telefone + "<br>" +
+                    "E-mail: " + dados[i].email + "<br>" +
+                    "Celular: " + dados[i].cel + "<br>");
+                cont++;
+            }
+
+            $("#principal").accordion();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="principal">
+        <h3 id="nome1"></h3>
+        <div id="item1"></div>
+        <h3 id="nome2"></h3>
+        <div id="item2"></div>
+        <h3 id="nome3"></h3>
+        <div id="item3"></div>
+        <h3 id="nome4"></h3>
+        <div id="item4"></div>
+        <h3 id="nome5"></h3>
+        <div id="item5"></div>
+        <h3 id="nome6"></h3>
+        <div id="item6"></div>
+        <h3 id="nome7"></h3>
+        <div id="item7"></div>
+        <h3 id="nome8"></h3>
+        <div id="item8"></div>
+        <h3 id="nome9"></h3>
+        <div id="item9"></div>
+        <h3 id="nome10"></h3>
+        <div id="item10"></div>
+    </div>
+</body>
+
+</html>

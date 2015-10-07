@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 5</title>
+    <script language="javascript" src="js/jquery.min.js"></script>
+    <script language="javascript">
+        $(function () {
+            var idade, peso, altura, conteudo, media, total, cont, contIdade;
+
+            cont = 0;
+            contIdade = 0;
+            total = 0;
+
+            conteudo = "<table border='1'>";
+            conteudo += "<tr><td> IDADE</td> <td> PESO</td> <td> ALTURA </td> </tr>";
+            for (i = 0; i < 10; i++) {
+                var idade = parseInt(prompt("Digite a Idade: ", ""));
+                var peso = parseFloat(prompt("Digite a Peso: ", ""));
+                var altura = parseFloat(prompt("Digite a Altura: ", ""));
+
+                if (altura > 1.5) {
+                    cont++;
+                    total = total + idade;
+                }
+                if (idade > 30) {
+                    contIdade++;
+                }
+
+                conteudo += "<tr>";
+                conteudo += "<td>" + idade + "</td>";
+                conteudo += "<td>" + peso + "</td>";
+                conteudo += "<td>" + altura + "</td>";
+                conteudo += "</tr>";
+            }
+            media = total / cont;
+
+            conteudo += "</table>";
+
+            conteudo += "<br /> A média das idades das pessoas com altura superior a 1.5 metros é: " + media;
+            conteudo += "<br /> A quantidade de pessoas com idade superior a 30 anos é: " + contIdade;
+
+            $("#result").html(conteudo);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="result"></div>
+</body>
+
+</html>

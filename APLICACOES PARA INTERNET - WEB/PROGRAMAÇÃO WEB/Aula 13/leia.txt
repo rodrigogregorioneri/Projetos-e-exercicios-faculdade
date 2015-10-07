@@ -1,0 +1,5 @@
+Biblioteca1.zip
+Solução com os dados (no formato JSON) e o processamento com JQuery/JavaScript dentro do arquivo HTML.
+
+Biblioteca2.zip
+Solução com os dados (no formato JSON) e o processamento com JQuery/JavaScript em arquivos separados do HTML, importados com: <script src="dados_json.js"></script> e <script src="funcoes_js.js"></script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Untitled Document</title>
+<script src="../js/jquery.min.js"></script>
+<script>
+$(function(){    
+    $("#dados").append("<span class='rotulo'>Nome: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("nome")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Endereço: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("endereco")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Telefone: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("tel")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>E-mail: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("email")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>CPF: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("cpf")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Data de Nascimento: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("dt_nasc")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Data de cadastro: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("dt_cad")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Data de retirada: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("dt_ret")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Serviço: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("serv")+"</span><br>");
+    $("#dados").append("<span class='rotulo'>Valor total: </span><span class='valor_rotulo'>"+
+                       localStorage.getItem("valor")+"</span><br>");
+});
+
+</script>    
+    <style>
+    body{
+        line-height: 50px;
+        font-size: 20pt;
+    }
+    .rotulo{
+        font-weight: bold;
+    }
+    .valor_rotulo{
+        color: #00f;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="dados"></div>
+</body>
+</html>

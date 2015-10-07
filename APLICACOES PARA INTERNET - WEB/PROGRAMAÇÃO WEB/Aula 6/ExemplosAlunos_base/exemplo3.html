@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#personagem {
+	position:absolute;
+	top:50px;
+}
+</style>
+<script>
+
+function alteraSrc(){
+	
+}
+
+function anima(){
+	//sorteia x e y
+	//conf objeto nas propriedades do css top e left
+}
+
+window.onload=function(){
+	var obj1=document.getElementById("button");
+	var obj2=document.getElementById("button2");
+	
+	obj1.onclick=alteraSrc;
+	obj2.onclick=function(){
+		setInterval("anima()",500);
+	}
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <input type="button" name="Button" id="button" value="Altera Imagem"/>
+  <input type="button" name="button2" id="button2" value="Anima"  />
+</form>
+<img src="goku.jpg" width="92" height="133" id="personagem" />
+</body>
+</html>

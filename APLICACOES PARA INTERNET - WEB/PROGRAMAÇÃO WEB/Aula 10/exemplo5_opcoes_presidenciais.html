@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>     
+    
+$(function(){
+  $("#button1").click(gravarCookiesOpcao1);
+  $("#button2").click(gravarCookiesOpcao2);
+  $("#button3").click(carregarCookies);
+});
+
+function gravarCookiesOpcao1(){
+	$.cookie("presid1",$("#presidente").val(),{expires: 5 });
+	$.cookie("vice1",$("#vicepresidente").val(),{expires: 5 });
+	alert("Dados gravados");
+	limparCampos();
+}
+
+function gravarCookiesOpcao2(){
+	$.cookie("presid2",$("#presidente").val());
+	$.cookie("vice2",$("#vicepresidente").val());
+	alert("Dados gravados");
+	limparCampos();
+}
+
+function carregarCookies(){     
+    var str = "";
+	if ($.cookie("presid1") != null) str += "Opção 1: " + $.cookie("presid1");     
+    if ($.cookie("vice1") != null) str += ", " + $.cookie("vice1") + "<br>Opção 2: ";
+    if ($.cookie("presid2") != null) str += $.cookie("presid2") ;
+    if ($.cookie("vice2") != null) str += ", " + $.cookie("vice2");
+    $("#preferencias").html(str);
+}
+
+function limparCampos(){
+	$("#presidente").val("");
+	$("#vicepresidente").val("");
+}
+    
+</script>
+ 
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>Presidente: 
+    <input name="presidente" type="text" id="presidente" size="10" />
+  </p>
+  <p>Vice-Presidente: 
+    <input name="vicepresidente" type="text" id="vicepresidente" size="10" />
+  </p>
+  <p>
+    <input type="button" name="button1" id="button1" value="Guardar preferência 1"  />
+    <input type="button" name="button2" id="button2" value="Guardar preferência 2"  />
+    <input type="button" name="button3" id="button3" value="Mostrar preferências"  />
+  </p>
+  <div id="preferencias" > </div>
+</form>
+
+</body>
+</html>

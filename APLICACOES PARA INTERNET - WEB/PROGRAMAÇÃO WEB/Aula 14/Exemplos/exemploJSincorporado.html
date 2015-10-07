@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JavaScript incorporado</title>
+    
+<script>    
+function calcula1(){
+	document.getElementById("txt1").value = "Botão 1 foi clicado.";
+}
+    
+function calcula2(){
+}
+
+window.onload=function(){
+	var obj1= document.getElementById("button1");
+	var obj2= document.getElementById("button2");
+	obj1.onclick = calcula1;
+	obj2.onclick = calcula2;
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <input type="button" name="button1" id="button1" value="Calcular"   />
+  </p>
+  <p>
+    <input type="button" name="button2" id="button2" value="Processar"  />
+  </p>
+  <p>
+    <input type="text" name="txt1" id="txt1" value=""  />
+  </p>
+</form>
+
+</body>
+</html>
+
+
+

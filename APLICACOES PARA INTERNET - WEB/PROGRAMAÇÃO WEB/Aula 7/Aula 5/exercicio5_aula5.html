@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Untitled Document</title>
+    
+<script>
+var num;    
+window.onload=function(){
+ sorteia();
+ var inicio = document.getElementById("btn");
+ inicio.onclick = jogar;      
+}
+function sorteia(){
+  num = Math.round(Math.random()*100);
+}
+function jogar(){
+    var acertou=-1;
+    var tentativas=0;
+    var aux;
+    while(acertou!= num){        
+        aux = prompt("Digite um numero");        
+        if (aux != "" && aux != null){
+            tentativas++;
+            acertou = parseInt(aux);
+            if(acertou < num){
+                alert("O num sorteado é maior");        
+                
+            }else if(acertou > num){
+                alert("O num sorteado é menor");
+                
+            }else{
+        alert("Acertou \n Tentativas="+tentativas);               
+            }        
+        }
+        
+    }
+}
+</script>
+</head>
+<body>
+<input type="button" id="btn" value="Começar">
+</body>
+</html>
