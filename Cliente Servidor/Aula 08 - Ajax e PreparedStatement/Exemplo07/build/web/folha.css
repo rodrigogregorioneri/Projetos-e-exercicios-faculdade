@@ -1,0 +1,22 @@
+BODY {
+   font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size : x-small;
+ 
+}
+P {
+   font-family : Arial;
+   font-size : x-small;
+ 
+   } 
+ 
+TD, TH {
+   font-size : x-small;
+}
+ 
+.sel {
+   font-size : xx-small;
+}
+ 
+.form {
+   background-color : Aqua;
+} 

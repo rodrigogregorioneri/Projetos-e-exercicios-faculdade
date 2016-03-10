@@ -1,0 +1,22 @@
+Criar a tabela abaixo
+
+Criar o diretório EJB dentro da pasta webapps (lembre-se que dentro da pasta EJB deve ter a estrutura WEB-INF\classes e o web.xml)
+
+DROP TABLE IF EXISTS `aula`.`clientes`;
+CREATE TABLE  `aula`.`clientes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `endereco` varchar(45) NOT NULL,
+  `cidade` varchar(45) NOT NULL,
+  `cep` varchar(9) NOT NULL,
+  `estado` varchar(2) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `cliente` varchar(1) NOT NULL,
+  `estadocivil` varchar(10) NOT NULL,
+  `interesse1` varchar(10) NOT NULL,
+  `interesse2` varchar(10) NOT NULL,
+  `interesse3` varchar(10) NOT NULL,
+  `interesse4` varchar(10) NOT NULL,
+  `comentario` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

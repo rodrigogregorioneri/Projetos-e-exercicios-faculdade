@@ -1,0 +1,263 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkMenu {
+	font-size: 12px;
+}
+.marcadoresDiagnosticos {
+	font-size: 12px;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+.diagnosticoDesarmeReconhecido {
+	height:8px;
+	font-size: 12px;
+	color: #FF2828;
+}
+.diagnosticoDesarmeNovo {
+	height:8px;
+	border-top:1px solid #FFFFFF;
+	border-right:0px;
+	border-left:0px;
+	font-size: 12px;
+	color: #FF2828;
+	font-weight: bolder;
+}
+.diagnosticoNormalReconhecido {
+	height:8px;
+	border-top:1px solid #FFFFFF;
+	border-right:0px;
+	border-left:0px;
+	font-size: 12px;
+	color: #339900;
+
+}
+.diagnosticoNormalNovo {
+	height:8px;
+	border-top:1px solid #FFFFFF;
+	border-right:0px;
+	border-left:0px;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #339900;
+}
+.cabecalhoTabelaDiagnostico {
+	height:8px;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.diagnosticoAdvertenciaReconhecido {
+	height:8px;
+	border-top:1px solid #FFFFFF;
+	border-right:0px;
+	border-left:0px;
+	font-size: 12px;
+	color: #FF9900;
+}
+.diagnosticoAdvertenciaNovo {
+	height:8px;
+	border-top:1px solid #FFFFFF;
+	border-right:0px;
+	border-left:0px;
+	font-size: 12px;
+	color: #FF9900;
+	font-weight: bolder;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+.login{
+	font-size: 12px;
+	color: #287EDF;
+	font-weight: bold;
+}
+
+.titulo_secao{
+	font-family: Sans-Serif, Arial, Helvetica;
+	font-size: 32px;
+	text-align: center;
+	color: #287EDF;
+	margin-bottom: 10px;
+}
+
+.titulo_erro{
+	font-family: Sans-Serif, Arial, Helvetica;
+	font-size: 32px;
+	text-align: center;
+	color: red;
+	margin-bottom: 10px;
+}
+
+.titulo_criacao_objeto{
+	font-family: Sans-Serif, Arial, Helvetica;
+	font-size: 16px;
+	color: #CC6633;
+}
+
+.input_text {
+	border: 1px solid #CC6633;
+	background-color: #FFE6DA;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.input_button{
+	border: 1px solid #CC6633;
+	background-color: #CC6633;
+	color: white;
+}
+
+.menu_principal{
+	margin-bottom: 10px;
+}
+
+.opcao_menu{
+	background-color: #CC6633;
+	background-image: url(images/opcao_menu.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 275px;
+	height: 50px;
+	cursor: hand;
+}
+
+.opcao_menu td{
+	border-bottom: 2px solid white;
+	padding: 5px;
+	text-align: left;
+}
+
+.opcao_menu a{
+	color: white;
+}
+
+.menu_rapido{
+	background-color: #CC6633;
+}
+
+.opcao_menu_rapido {
+	background-color: #CC6633;
+	cursor: hand;
+	height: 10px;
+	border-right: 0px solid white;	
+}
+
+.opcao_menu_rapido td{
+	padding: 0px;
+	spacing: 0px;
+}
+
+.opcao_menu_rapido a{
+	font-family: Verdana, Tahoma, Arial, Sans-Serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: white;	
+}
+
+.form{
+	font-size: 12px;
+	color: #287EDF;
+	font-weight: bold;
+}
+
+.mensagem{
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.roteiro_titulo{
+	font-size: 20px;
+}
+
+.roteiro_valor{
+	font-size: 20px;
+	color: #CC6633;
+	margin-left: 10px;
+}
+
+.linha_procedimento{
+	height: 25px;
+	font-size: 12px;
+	font-weight: bold;	
+	background-color: lightgrey;
+}
+
+.linha_procedimento td{
+	padding: 5px;
+	border-bottom: 2px solid white;	
+}
+
+.linha_acao{
+	height: 25px;
+	font-size: 12px;
+	background-color: #e7e7e7;
+}
+
+.linha_acao td{
+	padding: 5px;
+	border-bottom: 2px solid white;	
+}
+
+.linha_subacao{
+	height: 25px;
+	font-size: 12px;
+	background-color: #f0f0f0;
+}
+
+.linha_subacao td{
+	padding: 5px;
+	border-bottom: 2px solid white;	
+}
+
+.opcao{
+	text-decoration: none;
+	color: #287EDF;
+}
+
+.select_listagem{
+	font-size: 9px;
+}
+
+.select_listagem option{
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 9px;
+}
+
+.listagem_cabecalho{
+	font-size: 12px;
+	color: #287EDF;
+	font-weight: bold;
+}
+
+.listagem_linha{
+	height: 25px;
+	font-size: 12px;
+	background-color: #e7e7e7;
+}
+
+.listagem_linha td{
+	font-size: 11px;
+	padding-left: 5px;
+	background-color: #e7e7e7;	
+}
+
+.listagem_linha a{
+	color: black;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="  http://java.sun.com/xml/ns/j2ee/     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+    <!-- Mapeamento dos Servlets -->
+    <servlet>
+            <servlet-name>ControladorCadastro</servlet-name>
+            <display-name>ControladorCadastro</display-name>
+            <description>ControladorCadastro</description>
+            <servlet-class>exemplo.ControladorCadastro</servlet-class>
+    </servlet>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <!-- Controlador para operacoes gerais com os roteiros -->
+    <servlet-mapping>
+            <servlet-name>ControladorCadastro</servlet-name>
+            <url-pattern>/cadastrarAluno</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+            <servlet-name>ControladorCadastro</servlet-name>
+            <url-pattern>/removerAluno</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+            <servlet-name>ControladorCadastro</servlet-name>
+            <url-pattern>/listarAlunos</url-pattern>
+    </servlet-mapping>
+    
+    
+    <welcome-file-list>
+        <welcome-file>cadastraAluno.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <error-page>
+            <error-code>404</error-code>
+            <location>/error.jsp</location>
+    </error-page>
+    
+</web-app>
