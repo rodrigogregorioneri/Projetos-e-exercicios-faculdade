@@ -30,4 +30,4 @@ ServLets
 ActionScript
 C#
 
-Este repositoria não está finalizado estou organizando para adicionar mais codigos fontes de meus trabalho de faculdade
+Este repositorio não está finalizado estou organizando para adicionar mais codigos fontes de meus trabalho de faculdade
